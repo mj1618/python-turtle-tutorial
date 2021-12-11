@@ -246,8 +246,5 @@ Tricky rock formations may include:
 - a line from (1, 1) to (1, 10)
 - a diagonal from (2, 1) to (10, 9)
 - a diagonal from (10, 0) to (1, 9)
-- a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1)
-- same as previously, but placed wherever the turtles natural path goes
-
-
-
+- a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1). This is a three sided square (including the wall) designed to trap the turtle (though it has one way to get out).
+- same as previously, but placed wherever the turtles natural path goes so you are forced to navigate through the three-sided square
