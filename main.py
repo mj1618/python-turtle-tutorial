@@ -3,9 +3,7 @@ from utils.world import create_world
 
 world = create_world()
 world.create_rock(1, 1)
-world.create_rock(0, 1)
 world.create_plant(10, 10)
-
 world.create_turtle(0, 0)
 
 world.move_turtle_right()
