@@ -16,8 +16,8 @@ __GUI__ - the Graphical User Interface is created by your python program. The pr
 
 ## Step 1: Get setup
 
-First go to [https://replit.com/@mj1618/TurtleTutorial#README.md](https://replit.com/@mj1618/TurtleTutorial#README.md)
-And click "fork" to take a personal copy of this tutorial.
+First go to [https://replit.com/@mj1618/TurtleTutorial#README.md](https://replit.com/@mj1618/TurtleTutorial#README.md) and click "Fork repl" to take a personal copy of this tutorial.
+You may need to create an account with repl.it if you haven't got one already.
 Open the `main.py` file which you will be editing and click `Run` at the top of the page.
 This should open a GUI and a console with your program running.
 Adjust the size of the GUI to make it bigger if you can't see the entire grid.
@@ -118,12 +118,15 @@ __Challenge 1__
 
 Use for loops to get the turtle to the plant while repeating as few lines as possible.
 
-
 __Challenge 2__
 
 Try using for loops to create rocks.
-Note that you can use `i` for your `x` or `y` coordinates.
+Note that you can optionally use `i` for your `x` and `y` coordinates.
 You can also do some arithmatic in there like `i * 2` (i multiplied by 2).
+Create a rock formation that goes across the screen from (1, 5) to (9, 5).
+Can you create a diagonal line?
+
+Extra: there are some other ways to use `range()` and you can read about them [here](https://www.w3schools.com/python/ref_func_range.asp).
 
 __if statements__
 
@@ -182,4 +185,69 @@ Using `if/else` and `for` loops create a program that gets the turtle to the pla
 Then test your algorithm by placing rocks in the turtles way.
 
 Whenever you find a rock formation that your turtle can't navigate, change your turtle algorithm so it can handle all previous rock formations plus this one.
+
+## Step 3: Variables
+
+You may have found that it is hard for the turtle to handle all rock formations with the tools you have available so far.
+One of the things you might have got stuck on is that when a turtle has a rock to the right and above, it'll need to go back.
+But once it moves back it's going to try going right again, it can't remember that it already went that way.
+
+Variables are used to remember things in programs.
+Variables are set to a certain value, that value can be a number, text or many other things we'll learn about later.
+For now we'll stick to numbers and text.
+
+```py
+a = 1
+print(a)
+a = a * 2 + 1
+print(a)
+```
+
+What will print to the screen is a `1` followed by a `2`.
+
+__Challenge__
+
+Calculate the sum of the numbers from 1 to 100 using a `for` loop and a variable.
+
+__Text Variables__
+
+Variables can also hold text, which in programming are called "strings".
+You can concatenate strings using the plus symbol.
+
+```py
+a = "Hello, there."
+a = a + " My name is J".
+print(a)
+```
+
+This will print "Hello, there. My name is J" to the console.
+
+You can use variables to hold the last direction the turtle went in.
+
+```py
+last_direction = "LEFT"
+
+if world.is_rock_up() == True:
+  if last_direction == "LEFT":
+    world.move_turtle_left()
+
+if world.is_rock_up() == False:
+  if last_direction == "LEFT":
+    world.move_turtle_up()
+```
+
+This will help you get past the issue described previously of remembering the turtle's last direction and navigating tricky rock formations.
+
+__Challenge__
+
+Use variables, if/else and for loops to get past tricky rock formations.
+Tricky rock formations may include:
+- a line from (1, 1) to (10, 1)
+- a line from (1, 1) to (1, 10)
+- a diagonal from (2, 1) to (10, 9)
+- a diagonal from (10, 0) to (1, 9)
+- a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1)
+- same as previously, but placed wherever the turtles natural path goes
+
+
 
