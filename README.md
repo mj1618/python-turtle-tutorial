@@ -18,6 +18,11 @@ __GUI__ - the Graphical User Interface is created by your python program. The pr
 
 First go to [https://replit.com/@mj1618/TurtleTutorial#README.md](https://replit.com/@mj1618/TurtleTutorial#README.md)
 And click "fork" to take a personal copy of this tutorial.
+Open the `main.py` file which you will be editing and click `Run` at the top of the page.
+This should open a GUI and a console with your program running.
+Adjust the size of the GUI to make it bigger if you can't see the entire grid.
+
+## Step 2: Create a World
 
 The only file you need to edit is `main.py`.
 Other code and images sit in the folders `utils` and `assets`, you can have a look if you want but you don't need to touch these files for this tutorial.
