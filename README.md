@@ -33,6 +33,12 @@ __Data Structure__ - a list, dictionary or any other construct for storing data 
 
 __Algorithm__ - a sequence of steps that achieves an outcome. Often algorithms require a certain understanding to the crux of a problem to become clear.
 
+__Function__ - a block of code that can be called by a name and round brackets. E.g. `the_function()`.
+
+__Object__ - objects are a more complicated construct that you don't need to understand fully for this tutorial. Objects store data, but also have functions. The only object we will be referring to is the `world` object.
+
+__Comment__ - this is used to add notes to code, but are ignored by the program itself. Comments start with a `#` character and continue to the end of the line.
+
 ## Step 1: Get setup
 
 First go to [https://replit.com/@mj1618/TurtleTutorial](https://replit.com/@mj1618/TurtleTutorial) and click "Fork repl" to take a personal copy of this tutorial.
@@ -40,13 +46,14 @@ You may need to create an account with repl.it if you haven't got one already.
 Open the `main.py` file which you will be editing and click `Run` at the top of the page.
 This should open a GUI and a console with your program running.
 Adjust the size of the GUI to make it bigger if you can't see the entire grid.
+You can click on the GUI to focus it, and then use arrow keys to move the turtle around.
 
 ## Step 2: Create a World
 
 The only file you need to edit is `main.py`.
-There is a `main_backup.py` which is a copy of main you can use if you need to go back to the original program.
+There is a `main_original.py` which is a copy of main you can use if you need to go back to the original program.
 Other code and images sit in the folders `utils` and `assets`, you can have a look if you want but you don't need to touch these files for this tutorial.
-The `solutions` folder contains some nifty solutions to the game which you can look at if you are stuck for ideas.
+The `solutions` folder contains some nifty solutions to the game which you can look at if you are stuck for ideas later on in the tutorial.
 
 __Imports__
 
@@ -56,18 +63,18 @@ from utils.world import create_world
 ```
 
 This imports some things you can use from the utils.
-All it means is you can now use `pause` and `create_world` in the file.
+All it means is you can now use the functions `pause` and `create_world` in the file.
 
 __Create Stuff__
 
 ```py
-world = create_world()
-world.create_rock(1, 1)
-world.create_plant(10, 10)
-world.create_turtle(0, 0)
+world = create_world() # create the world object
+world.create_rock(1, 1) # call a function on world to create a rock
+world.create_plant(10, 10) # a plant
+world.create_turtle(0, 0) # and your turtle
 ```
 
-This creates the grid and uses the variable `world` to store things in.
+This creates the grid and uses the variable `world` to store the object in.
 You then call functions on the world to put elements on the grid.
 You pass in an `x` and `y` coordinate to tell the world where to put these elements.
 
@@ -97,17 +104,17 @@ It's not important, just keep it at the end so the program stays running.
 
 __Have a play__
 
-Now that you have these basics in `main.py` play around a bit.
+Now that you have these basics in `main.py`, play around a bit.
 Change the coordinates being passed in to create elements.
 Repeat the movement of the turtle lines, see if you can move the turtle to the plant by doing this.
 Try putting some rocks in the way of the turtle and then move the turtle around them.
 
 Don't worry about breaking things, you can always go back to the start.
-Playing and breaking things is the most important part of programming including at advanced levels.
-It is a core skill you must learn and get comfortable with as it is the only way to properly test your code and to see where its limits are.
+Even at advanced levels playing and breaking things is a core part of programming.
+It is a  skill you must learn and get comfortable with as it is the only way to properly test your code and to see where its limits are.
 You should find some bugs in the game already by doing this.
 
-## Step 3: ifs and for loops
+## Step 3: for loops and if/else
 
 One way to get the Turtle to the plant is to repeat the line `world.move_turtle_right()` 10 times, and then repeat the line `world.move_turtle_up()` 10 times.
 You should see something printed to the console congratulating you for reaching the plant.
@@ -137,6 +144,8 @@ for i in range(10):
 print('this will only print once')
 ```
 
+_Note: python takes spaces very seriously, one space forward or back and python will think this is a different block of code._
+
 __Challenge 1__
 
 Use for loops to get the turtle to the plant while repeating as few lines as possible.
@@ -149,7 +158,7 @@ You can also do some arithmatic in there like `i * 2` (i multiplied by 2).
 Create a rock formation that goes across the screen from (1, 5) to (9, 5).
 Can you create a diagonal line?
 
-Extra: there are some other ways to use `range()` and you can read about them [here](https://www.w3schools.com/python/ref_func_range.asp).
+Extra: there are some other ways to use `range()` and you can read about them at [https://www.w3schools.com/python/ref_func_range.asp](https://www.w3schools.com/python/ref_func_range.asp).
 
 __if statements__
 
@@ -167,7 +176,7 @@ for i in range(10):
     print(i)
 ```
 
-The `%` is the modulo operator, and you can read `i % 2` as "the remained when `i` is divided by `2`.
+The `%` is the modulo operator, and you can read `i % 2` as "the remainder when `i` is divided by `2`.
 
 You'll notice only even numbers are printed to the console.
 Now try printing just odd numbers, or just numbers divisible by 3.
@@ -204,7 +213,7 @@ else:
 
 __Challenge__
 
-Using `if/else` and `for` loops create a program that gets the turtle to the plant as best as possible.
+Using `if/else` and `for` loops create a program that gets the turtle to the plant.
 Then test your algorithm by placing rocks in the turtles way.
 
 Whenever you find a rock formation that your turtle can't navigate, change your turtle algorithm so it can handle all previous rock formations plus this one.
@@ -216,7 +225,8 @@ One of the things you might have got stuck on is that when a turtle has a rock t
 But once it moves back it's going to try going right again, it can't remember that it already went that way.
 
 Variables are used to remember things in programs.
-Variables are set to a certain value, that value can be a number, text or many other things we'll learn about later.
+Variables are set to a certain value.
+That value can be a number, text or many other things.
 For now we'll stick to numbers and text.
 
 ```py
@@ -361,10 +371,12 @@ For this challenge you will need the following tools mastered:
 - and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
 This is a tough challenge and involves an algorithm and some data structures.
-Data Structures are frequently used in day-to-day software development roles and this is a great exercise to learn some.
-Algorithms are a branch of Computer Science that is rarely used in day-to-day software development, but it is worth at least learning the Shortest Path Algorithm to get an appreciation for these elusive things.
+Even seasoned developers may not have come across this type of problem and may struggle, so don't worry if you don't get it straight away.
 
-The solution is available here if you want to refer to it: [./solutions/shortest_path.py](./solutions/shortest_path.py).
+Data Structures are frequently used in day-to-day software development roles and this is a great exercise to learn some.
+Algorithms are a branch of Computer Science that is rarely used in day-to-day software development, but it is worth at least learning the Shortest Path Algorithm to get an appreciation for these elusive beasts.
+
+The solution is available here if you get stuck: [./solutions/shortest_path.py](./solutions/shortest_path.py).
 
 ## Step 7: Master Level Algorithm
 
@@ -373,3 +385,5 @@ Create an algorithm that reaches all plants (that are reachable) in the shortest
 
 You will need the above shortest path algorithm, plus some of your own flare to figure out how to hit all plants.
 Start with what's called a "brute-force" algorithm: come up with every possible order of plants and solve for every order, then select the one that results in the least number of turtle steps.
+
+If you accomplish that, try to do it in a more efficient way than brute-force.
