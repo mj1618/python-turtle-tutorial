@@ -35,7 +35,7 @@ __Algorithm__ - a sequence of steps that achieves an outcome. Often algorithms r
 
 ## Step 1: Get setup
 
-First go to [https://replit.com/@mj1618/TurtleTutorial#README.md](https://replit.com/@mj1618/TurtleTutorial#README.md) and click "Fork repl" to take a personal copy of this tutorial.
+First go to [https://replit.com/@mj1618/TurtleTutorial](https://replit.com/@mj1618/TurtleTutorial) and click "Fork repl" to take a personal copy of this tutorial.
 You may need to create an account with repl.it if you haven't got one already.
 Open the `main.py` file which you will be editing and click `Run` at the top of the page.
 This should open a GUI and a console with your program running.
