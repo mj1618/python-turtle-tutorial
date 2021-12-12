@@ -38,7 +38,9 @@ Adjust the size of the GUI to make it bigger if you can't see the entire grid.
 ## Step 2: Create a World
 
 The only file you need to edit is `main.py`.
+There is a `main_backup.py` which is a copy of main you can use if you need to go back to the original program.
 Other code and images sit in the folders `utils` and `assets`, you can have a look if you want but you don't need to touch these files for this tutorial.
+The `solutions` folder contains some nifty solutions to the game which you can look at if you are stuck for ideas.
 
 __Imports__
 
@@ -63,7 +65,7 @@ This creates the grid and uses the variable `world` to store things in.
 You then call functions on the world to put elements on the grid.
 You pass in an `x` and `y` coordinate to tell the world where to put these elements.
 
-_Note: to see all the possible functions to call on the `world` object, see the [API Guide](./API.md)._
+_Note: to see all the possible functions to call on the `world` object, see the [API Guide](./docs/API.md)._
 
 __Move the Turtle__
 
@@ -264,11 +266,104 @@ Tricky rock formations may include:
 - a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1). This is a three sided square (including the wall) designed to trap the turtle (though it has one way to get out).
 - same as previously, but placed wherever the turtles natural path goes so you are forced to navigate through the three-sided square
 
-## Step 5: Lists and Maps
+## Step 5: Lists and Dictionaries
 
-## Step 6: The Perfect Algorithm
+Variables are great and all, however they're a bit limiting.
+Imagine we don't have just one number, but a list of numbers with a particular order e.g. if we wanted to remember all the moves our turtle has made thus far.
+Python provides `list()` to allow us to do that.
+
+As for Dictionaries (or what other languages call maps), imagine we wanted to look variables up based on their key.
+For example: if we had multiple turtles, and wanted to look up each turtles position based on the turtles name.
+
+__Lists__
+
+Let's dive into some code for lists.
+
+```py
+x = list() # our variable is now a list of elements, not just a single element.
+x.append(1)
+x.append(2)
+print(x)
+```
+
+This program will print `[1, 2]` to the console.
+
+`x.pop()` can then be used to remove an element from the back of a list and return it's value.
+
+```py
+x = list()
+x.append(1)
+x.append(2)
+value = x.pop()
+print(value)
+print(x)
+```
+
+This will print `2` followed by `[1]`.
+You don't actually have to remove an element in a list to get it, you can also get it by knowing its index.
+Indexes start at 0 for the first element and go on from there.
+
+```py
+x = list()
+x.append(1)
+x.append(2)
+print(x[1])
+```
+Will print `2` to the console.
+
+You can also pop an element from any index, here's how to pop from the front:
+```py
+x = list()
+x.append(1)
+x.append(2)
+value = x.pop(0)
+print(value)
+```
+Will print `1` this time.
+
+As always: have a play, try to break it!
+
+__Dictionaries__
+
+Dictionaries can be described a bit simpler than lists, the only operation you really need to know to use dictionaries is how to set a `key` to a `value`.
+Think of keys like names for variables.
+
+```py
+x = {} # creates a new dictionary on x
+x['a'] = 1
+x['b'] = 2
+print(x['a']) # prints 1
+print(x) # prints {a: 1, b: 2}
+```
+
+Have a play, break it, and read up more if you need more information here: [https://www.programiz.com/python-programming/dictionary](https://www.programiz.com/python-programming/dictionary)
+
+## Step 6: Shortest Path Algorithm
+
+For this challenge you will need the following tools mastered:
+- if/else and for loops
+- lists and dictionaries
+- `world` functions:
+-- [world.create_rock()](./docs/API.md#worldcreate_rock)
+-- [world.create_turtle()](./docs/API.md#worldcreate_turtle)
+-- [world.create_plant()](./docs/API.md#worldcreate_plant)
+-- [world.get_turtle_position()](./docs/API.md#worldget_turtle_position)
+-- [world.get_plant_positions()](./docs/API.md#worldget_plant_positions)
+-- [world.get_positions_around()](./docs/API.md#worldget_positions_around)
+-- [world.create_random_rocks()](./docs/API.md#worldcreate_random_rocks)
+-- [world.move_along_path()](./docs/API.md#worldmove_along_path)
+- and an understanding of the [Shortest Path Algorithm]
+
+This is a tough challenge and involves an algorithm and some data structures.
+Data Structures are frequently used in day-to-day software development roles and this is a great exercise to learn some.
+Algorithms are a branch of Computer Science that is rarely used in day-to-day software development, but it is worth at least learning the Shortest Path Algorithm to get an appreciation for these elusive things.
+
+The solution is available here if you want to refer to it: [./solutions/shortest_path.py](./solutions/shortest_path.py).
 
 ## Step 7: Master Level Algorithm
 
 Add multiple random plants to the world.
 Create an algorithm that reaches all plants (that are reachable) in the shortest possible number of moves.
+
+You will need the above shortest path algorithm, plus some of your own flare to figure out how to hit all plants.
+Start with what's called a "brute-force" algorithm: come up with every possible order of plants and solve for every order, then select the one that results in the least number of turtle steps.
