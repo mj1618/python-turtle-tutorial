@@ -6,6 +6,12 @@ Your turtle can move up, down, left and right.
 Your turtle must avoid rocks to get to a plant.
 In the first version the game is won by reaching the plant.
 
+  * [Terminology](#terminology)
+  * [Step 1: Get setup](#step-1--get-setup)
+  * [Step 2: Create a World](#step-2--create-a-world)
+  * [Step 3: ifs and for loops](#step-3--ifs-and-for-loops)
+  * [Step 4: Variables](#step-4--variables)
+
 ## Terminology
 
 __Python__ - python is the programming language being used. It is an interpreted language. This means it does not run natively on a computer, instead you must have Python installed and your code is interpreted by the Python program. Many languages work this way and python is the most widely used.
@@ -84,7 +90,7 @@ Playing and breaking things is the most important part of programming including 
 It is a core skill you must learn and get comfortable with as it is the only way to properly test your code and to see where its limits are.
 You should find some bugs in the game already by doing this.
 
-## Step 2: ifs and for loops
+## Step 3: ifs and for loops
 
 One way to get the Turtle to the plant is to repeat the line `world.move_turtle_right()` 10 times, and then repeat the line `world.move_turtle_up()` 10 times.
 You should see something printed to the console congratulating you for reaching the plant.
@@ -186,7 +192,7 @@ Then test your algorithm by placing rocks in the turtles way.
 
 Whenever you find a rock formation that your turtle can't navigate, change your turtle algorithm so it can handle all previous rock formations plus this one.
 
-## Step 3: Variables
+## Step 4: Variables
 
 You may have found that it is hard for the turtle to handle all rock formations with the tools you have available so far.
 One of the things you might have got stuck on is that when a turtle has a rock to the right and above, it'll need to go back.
@@ -203,7 +209,7 @@ a = a * 2 + 1
 print(a)
 ```
 
-What will print to the screen is a `1` followed by a `2`.
+What will print to the screen is a `1` followed by a `3`.
 
 __Challenge__
 

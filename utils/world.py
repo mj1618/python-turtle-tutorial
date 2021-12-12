@@ -4,6 +4,7 @@ import sys
 from .turtle import MyTurtle
 from .rock import Rock
 from .plant import Plant
+import random
 
 my_world = None
 
@@ -37,6 +38,15 @@ class World():
     turtle.onkey(self.move_turtle_left, 'Left')
     turtle.onkey(self.move_turtle_right, 'Right')
     turtle.listen()
+
+  def get_rock_positions(self):
+    return [(rock.x, rock.y) for rock in self.rocks]
+  
+  def get_plant_positions(self):
+    return [(plant.x, plant.y) for plant in self.plants]
+
+  def get_turtle_position(self):
+    return (self.my_turtle.x, self.my_turtle.y)
 
   def create_turtle(self, x, y):
     if self.my_turtle is None:
@@ -116,9 +126,56 @@ class World():
 
   def is_rock_at(self, x, y):
     for rock in self.rocks:
-      if rock.x + 1 == self.my_turtle.x and rock.y == self.my_turtle.y:
+      if rock.x == x and rock.y == y:
         return True
     return False
+
+  
+  def create_random_rocks(self, number_of_rocks):
+      remaining_positions = set()
+      for x in range(11):
+          for y in range(11):
+              remaining_positions.add((x, y))
+
+      if self.has_turtle() is True:
+        remaining_positions.remove(self.get_turtle_position())  # turtle starting point
+      if self.has_plant() is True:
+        remaining_positions.remove(self.get_plant_positions()[0])  # plant finish point
+
+      for i in range(number_of_rocks):
+          (x, y) = random.choice(tuple(remaining_positions))
+          self.create_rock(x, y)
+          remaining_positions.remove((x, y))
+
+  def get_positions_around(self, position):
+    ls = list()
+    dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    for dir in dirs:
+      new_pos = (position[0] + dir[0], position[1] + dir[1])
+      if new_pos[0] >= 0 and new_pos[0] < 11 and new_pos[1] >= 0 and new_pos[1] < 11 and self.is_rock_at(new_pos[0], new_pos[1]) == False:
+        ls.append(new_pos)
+    return ls
+
+  def take_step(self, step):
+    current = self.get_turtle_position()
+    if step[0] == current[0] - 1:
+      self.move_turtle_left()
+    elif step[0] == current[0] + 1:
+      self.move_turtle_right()
+    elif step[1] == current[1] - 1:
+      self.move_turtle_down()
+    elif step[1] == current[1] + 1:
+      self.move_turtle_up()
+
+  def move_along_path(self, path):
+    for step in path:
+      self.take_step(step)
+
+  def has_plant(self):
+    return len(self.plants) > 0
+
+  def has_turtle(self):
+    return self.my_turtle is not None
   
 def create_world():
   global my_world

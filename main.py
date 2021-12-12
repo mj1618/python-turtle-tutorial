@@ -11,7 +11,4 @@ world.move_turtle_left()
 world.move_turtle_up()
 world.move_turtle_down()
 
-
 pause()
-
-
