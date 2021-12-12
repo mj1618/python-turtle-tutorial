@@ -25,9 +25,9 @@ __Python__ - python is the programming language being used. It is an interpreted
 
 __Console__ - this is a little window that is running the program. Text will print in the console from the program and you can ask users for text input.
 
-__GUI__ - the Graphical User Interface is created by your python program. The program is running in the console, and creates the GUI from there.
+__GUI__ - the Graphical User Interface displays images/graphics and is created by your python program. The program is running in the console, and creates the GUI from there.
 
-__Tuple__ - a python value with two parts to it, e.g. `(1, 2)`. These are used to represent coordinates in the turtle game.
+__Tuple__ - pronounced "too-pull", is a python value with two parts to it and created with round brackets, e.g. `x = (1, 2)`. These are used to represent x/y coordinates in the turtle game.
 
 __Data Structure__ - a list, dictionary or any other construct for storing data in a convenient and efficient way
 
