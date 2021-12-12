@@ -37,7 +37,7 @@ __Function__ - a block of code that can be called by a name and round brackets. 
 
 __Object__ - objects are a more complicated construct that you don't need to understand fully for this tutorial. Objects store data, but also have functions. The only object we will be referring to is the `world` object.
 
-__Comment__ - this is used to add notes to code, but are ignored by the program itself. Comments start with a `#` character and continue to the end of the line.
+__Comment__ - these are notes you add to code, but are ignored by the program itself. Comments start with a `#` character and continue to the end of the line.
 
 ## Step 1: Get setup
 
