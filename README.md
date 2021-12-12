@@ -373,7 +373,7 @@ print(x) # prints {a: 1, b: 2}
 
 Have a play, break it, and read up more if you need more information here: [https://www.programiz.com/python-programming/dictionary](https://www.programiz.com/python-programming/dictionary)
 
-## Step 6: Shortest Path Algorithm
+## Step 6: Shortest Grid Path Algorithm
 
 For this challenge you will need the following tools mastered:
 - if/else, while and for loops
@@ -387,7 +387,7 @@ For this challenge you will need the following tools mastered:
   - [world.get_positions_around(position)](./docs/API.md#worldget_positions_aroundposition)
   - [world.create_random_rocks(number_of_rocks)](./docs/API.md#worldcreate_random_rocksnumber_of_rocks)
   - [world.move_along_path(path)](./docs/API.md#worldmove_along_pathpath)
-- and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
+- and an understanding of the [Shortest Grid Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
 The sequence of steps for the algorithm is as follows:
 - create a dictionary `points_to` whose keys are coordinate tuples and values are coordinate tuples. Think of `points_to` as the grid, but with each position pointing to an adjacent position.
@@ -419,5 +419,7 @@ Create an algorithm that reaches all plants (that are reachable) in the shortest
 
 You will need the above shortest path algorithm, plus some of your own flare to figure out how to hit all plants.
 Start with what's called a "brute-force" algorithm: come up with every possible order of plants and solve for every order, then select the one that results in the least number of turtle steps.
+Permutations may help you with this challenge: [https://www.geeksforgeeks.org/permutation-and-combination-in-python/](https://www.geeksforgeeks.org/permutation-and-combination-in-python/).
 
 If you accomplish that, try to do it in a more efficient way than brute-force.
+For this you will need to learn Djikstra's Shortest Path Algorithm - [https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.](https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.)
