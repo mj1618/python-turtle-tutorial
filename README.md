@@ -6,6 +6,10 @@ Your turtle can move up, down, left and right.
 Your turtle must avoid rocks to get to a plant.
 In the first version the game is won by reaching the plant.
 
+![Turtle Screenshot](/assets/screenshot.png)
+
+## Contents
+
   * [Terminology](#terminology)
   * [Step 1: Get setup](#step-1-get-setup)
   * [Step 2: Create a World](#step-2-create-a-world)
@@ -254,3 +258,8 @@ Tricky rock formations may include:
 - a diagonal from (10, 0) to (1, 9)
 - a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1). This is a three sided square (including the wall) designed to trap the turtle (though it has one way to get out).
 - same as previously, but placed wherever the turtles natural path goes so you are forced to navigate through the three-sided square
+
+## Step 5: Lists and Maps
+
+## Step 6: The Perfect Algorithm
+
