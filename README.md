@@ -16,7 +16,7 @@ The game is won by reaching the plant.
   - [Step 3: for loops, while loops and if/else](#step-3-for-loops-while-loops-and-ifelse)
   - [Step 4: Variables](#step-4-variables)
   - [Step 5: Lists and Dictionaries](#step-5-lists-and-dictionaries)
-  - [Step 6: Shortest Path Algorithm](#step-6-shortest-path-algorithm)
+  - [Step 6: Shortest Grid Path Algorithm](#step-6-shortest-grid-path-algorithm)
   - [Step 7: Master Level Algorithm](#step-7-master-level-algorithm)
 
 ## Terminology
