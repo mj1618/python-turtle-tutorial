@@ -360,14 +360,14 @@ For this challenge you will need the following tools mastered:
 - if/else and for loops
 - lists and dictionaries
 - `world` functions:
-  - [world.create_rock()](./docs/API.md#worldcreate_rock)
-  - [world.create_turtle()](./docs/API.md#worldcreate_turtle)
-  - [world.create_plant()](./docs/API.md#worldcreate_plant)
+  - [world.create_rock()](./docs/API.md#worldcreate_rockx-y)
+  - [world.create_turtle()](./docs/API.md#worldcreate_turtlex-y)
+  - [world.create_plant()](./docs/API.md#worldcreate_plantx-y)
   - [world.get_turtle_position()](./docs/API.md#worldget_turtle_position)
   - [world.get_plant_positions()](./docs/API.md#worldget_plant_positions)
-  - [world.get_positions_around()](./docs/API.md#worldget_positions_around)
-  - [world.create_random_rocks()](./docs/API.md#worldcreate_random_rocks)
-  - [world.move_along_path()](./docs/API.md#worldmove_along_path)
+  - [world.get_positions_around()](./docs/API.md#worldget_positions_aroundposition)
+  - [world.create_random_rocks()](./docs/API.md#worldcreate_random_rocksnumber_of_rocks)
+  - [world.move_along_path()](./docs/API.md#worldmove_along_pathpath)
 - and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
 This is a tough challenge and involves an algorithm and some data structures.
