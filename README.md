@@ -414,7 +414,7 @@ The solution is available here if you get stuck: [./solutions/shortest_path.py](
 
 ## Step 7: Master Level Algorithm
 
-Add multiple random plants to the world.
+Add multiple plants at random positions to the world and add rocks at random positions.
 Create an algorithm that reaches all plants (that are reachable) in the shortest possible number of moves.
 
 You will need the above shortest path algorithm, plus some of your own flare to figure out how to hit all plants.
