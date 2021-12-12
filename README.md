@@ -1,10 +1,10 @@
 # Python Turtle Tutorial
 
 In this tutorial you're going to make a game and play it programmatically.
-The game is played on a 11 x 11 grid.
+The game is played on an 11 x 11 grid.
 Your turtle can move up, down, left and right.
 Your turtle must avoid rocks to get to a plant.
-In the first version the game is won by reaching the plant.
+The game is won by reaching the plant.
 
 ![Turtle Screenshot](/assets/screenshot.png)
 
