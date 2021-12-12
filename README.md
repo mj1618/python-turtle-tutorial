@@ -376,7 +376,7 @@ Have a play, break it, and read up more if you need more information here: [http
 ## Step 6: Shortest Path Algorithm
 
 For this challenge you will need the following tools mastered:
-- if/else and for loops
+- if/else, while and for loops
 - lists and dictionaries
 - `world` functions:
   - [world.create_rock()](./docs/API.md#worldcreate_rockx-y)
