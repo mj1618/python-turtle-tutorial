@@ -379,14 +379,14 @@ For this challenge you will need the following tools mastered:
 - if/else, while and for loops
 - lists and dictionaries
 - `world` functions:
-  - [world.create_rock()](./docs/API.md#worldcreate_rockx-y)
-  - [world.create_turtle()](./docs/API.md#worldcreate_turtlex-y)
-  - [world.create_plant()](./docs/API.md#worldcreate_plantx-y)
+  - [world.create_rock(x, y)](./docs/API.md#worldcreate_rockx-y)
+  - [world.create_turtle(x, y)](./docs/API.md#worldcreate_turtlex-y)
+  - [world.create_plant(x, y)](./docs/API.md#worldcreate_plantx-y)
   - [world.get_turtle_position()](./docs/API.md#worldget_turtle_position)
   - [world.get_plant_positions()](./docs/API.md#worldget_plant_positions)
-  - [world.get_positions_around()](./docs/API.md#worldget_positions_aroundposition)
-  - [world.create_random_rocks()](./docs/API.md#worldcreate_random_rocksnumber_of_rocks)
-  - [world.move_along_path()](./docs/API.md#worldmove_along_pathpath)
+  - [world.get_positions_around(position)](./docs/API.md#worldget_positions_aroundposition)
+  - [world.create_random_rocks(number_of_rocks)](./docs/API.md#worldcreate_random_rocksnumber_of_rocks)
+  - [world.move_along_path(path)](./docs/API.md#worldmove_along_pathpath)
 - and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
 The sequence of steps for the algorithm is as follows:
