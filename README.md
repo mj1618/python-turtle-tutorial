@@ -370,6 +370,21 @@ For this challenge you will need the following tools mastered:
   - [world.move_along_path()](./docs/API.md#worldmove_along_pathpath)
 - and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
+The sequence of steps for the algorithm is as follows:
+- create a dictionary `points_to` whose keys are coordinate tuples and values are coordinate tuples
+- set `points_to[turtle_starting_point]` to itself
+- set all other `points_to` coordinates on the grid to `None`
+- create a list called `queue` that has one element: the turtles starting position
+- iterate while the `queue` has values, and `points_to[plant_position]` is None
+  - `pop` from the front of the queue into `current`
+  - get positions around current using `world.get_positions_around(current)`
+  - for loop over these positions using the `next` variable
+    - set `points_to` for `next` to `current` (i.e. indicating next points to current)
+    - append `next` to `queue`
+- if `points_to[plant_position]` is `None` it means there is no valid path
+- else follow the chain of `points_to` from the plant position back to the turtle
+- use the list of positions (the `path`) generated to pass into `world.move_along_path(path)`. _Note it will need to be ordered from the turtle starting position as the first position._
+
 This is a tough challenge and involves an algorithm and some data structures.
 Even seasoned developers may not have come across this type of problem and may struggle, so don't worry if you don't get it straight away.
 
