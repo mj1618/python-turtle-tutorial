@@ -7,10 +7,10 @@ Your turtle must avoid rocks to get to a plant.
 In the first version the game is won by reaching the plant.
 
   * [Terminology](#terminology)
-  * [Step 1: Get setup](#step-1--get-setup)
-  * [Step 2: Create a World](#step-2--create-a-world)
-  * [Step 3: ifs and for loops](#step-3--ifs-and-for-loops)
-  * [Step 4: Variables](#step-4--variables)
+  * [Step 1: Get setup](#step-1-get-setup)
+  * [Step 2: Create a World](#step-2-create-a-world)
+  * [Step 3: ifs and for loops](#step-3-ifs-and-for-loops)
+  * [Step 4: Variables](#step-4-variables)
 
 ## Terminology
 
