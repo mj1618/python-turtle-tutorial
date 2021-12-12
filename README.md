@@ -27,6 +27,12 @@ __Console__ - this is a little window that is running the program. Text will pri
 
 __GUI__ - the Graphical User Interface is created by your python program. The program is running in the console, and creates the GUI from there.
 
+__Tuple__ - a python value with two parts to it, e.g. `(1, 2)`. These are used to represent coordinates in the turtle game.
+
+__Data Structure__ - a list, dictionary or any other construct for storing data in a convenient and efficient way
+
+__Algorithm__ - a sequence of steps that achieves an outcome. Often algorithms require a certain understanding to the crux of a problem to become clear.
+
 ## Step 1: Get setup
 
 First go to [https://replit.com/@mj1618/TurtleTutorial#README.md](https://replit.com/@mj1618/TurtleTutorial#README.md) and click "Fork repl" to take a personal copy of this tutorial.
