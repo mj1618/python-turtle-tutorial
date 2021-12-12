@@ -29,11 +29,19 @@ world = create_world()
 
 ## world.create_rock(x, y)
 
+Create a rock at (x, y)
+
 ## world.create_plant(x, y)
+
+Create a plant at (x, y)
 
 ## world.create_turtle(x, y)
 
+Create a turtle at (x, y)
+
 ## world.is\_rock_at(x, y)
+
+Returns `True` if a rock is currently at (x, y), returns False otherwise.
 
 ## world.is\_rock_{direction}()
 
@@ -46,6 +54,8 @@ Returns True if a rock is next to the turtle in the specified direction, otherwi
 
 ## world.is_turtle_on_plant()
 
+Returns True if the turtle is on top of the plant and the game is won.
+
 ## world.move\_turtle_{direction}()
 
 - world.move_turtle_right()
@@ -53,20 +63,51 @@ Returns True if a rock is next to the turtle in the specified direction, otherwi
 - world.move_turtle_up()
 - world.move_turtle_down()
 
+Move the turtle one step in the specified direction.
+Will not move the turtle into walls or into rocks.
+Prints a winning message to the screen if the turtle moves onto a plant.
+
 ## world.get\_rock_positions()
+
+Returns a `list` of tuples of all the positions of the rocks currently on the grid.
+
+E.g.
+```py
+[(1, 1), (1, 2), (1,3)]
+```
 
 ## world.get\_plant_positions()
 
+Returns a `list` of tuples of all the positions of the plants currently on the grid.
+The tutorial only ever uses one plant.
+
 ## world.get\_turtle_position()
+
+Returns a tuple of the turtle's position.
 
 ## world.create_random_rocks(number_of_rocks)
 
+Create the specified number of rocks in random positions.
+
 ## world.get_positions_around(position)
+
+Return a list of the up, down, left, right coordinates around the given argument `position`.
+Only includes points that are within the grid and do not have rocks.
 
 ## world.take_step(position)
 
+Move the turtle one step to the specified `position`.
+If the position is not right next to the turtle this function does nothing.
+
 ## world.move_along_path(path)
+
+Move step by step along the given path.
+`path` is a list of positions in-order and the turtle should be able to move from one to the next.
 
 ## world.has_plant()
 
+Returns `True` if a plant has been added to the world, `False` otherwise.
+
 ## world.has_turtle()
+
+Returns `True` if a turtle has been added to the world, `False` otherwise.

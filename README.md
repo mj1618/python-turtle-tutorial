@@ -10,11 +10,14 @@ In the first version the game is won by reaching the plant.
 
 ## Contents
 
-  * [Terminology](#terminology)
-  * [Step 1: Get setup](#step-1-get-setup)
-  * [Step 2: Create a World](#step-2-create-a-world)
-  * [Step 3: ifs and for loops](#step-3-ifs-and-for-loops)
-  * [Step 4: Variables](#step-4-variables)
+  - [Terminology](#terminology)
+  - [Step 1: Get setup](#step-1-get-setup)
+  - [Step 2: Create a World](#step-2-create-a-world)
+  - [Step 3: ifs and for loops](#step-3-ifs-and-for-loops)
+  - [Step 4: Variables](#step-4-variables)
+  - [Step 5: Lists and Maps](#step-5-lists-and-maps)
+  - [Step 6: The Perfect Algorithm](#step-6-the-perfect-algorithm)
+  - [Step 7: Master Level Algorithm](#step-7-master-level-algorithm)
 
 ## Terminology
 
@@ -59,6 +62,8 @@ world.create_turtle(0, 0)
 This creates the grid and uses the variable `world` to store things in.
 You then call functions on the world to put elements on the grid.
 You pass in an `x` and `y` coordinate to tell the world where to put these elements.
+
+_Note: to see all the possible functions to call on the `world` object, see the [API Guide](./API.md)._
 
 __Move the Turtle__
 
@@ -263,3 +268,7 @@ Tricky rock formations may include:
 
 ## Step 6: The Perfect Algorithm
 
+## Step 7: Master Level Algorithm
+
+Add multiple random plants to the world.
+Create an algorithm that reaches all plants (that are reachable) in the shortest possible number of moves.
