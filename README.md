@@ -421,5 +421,4 @@ You will need the above shortest path algorithm, plus some of your own flare to 
 Start with what's called a "brute-force" algorithm: come up with every possible order of plants and solve for every order, then select the one that results in the least number of turtle steps.
 Permutations may help you with this challenge: [https://www.geeksforgeeks.org/permutation-and-combination-in-python/](https://www.geeksforgeeks.org/permutation-and-combination-in-python/).
 
-If you accomplish that, try to do it in a more efficient way than brute-force.
-For this you will need to learn Djikstra's Shortest Path Algorithm - [https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.](https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.)
+You may get a slightly more efficient algorithm than this by remembering the paths between nodes so you don't have to repeat Shortest Grid Path for paths you have covered before.
