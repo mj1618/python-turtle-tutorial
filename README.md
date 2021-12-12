@@ -13,7 +13,7 @@ In the first version the game is won by reaching the plant.
   - [Terminology](#terminology)
   - [Step 1: Get setup](#step-1-get-setup)
   - [Step 2: Create a World](#step-2-create-a-world)
-  - [Step 3: ifs and for loops](#step-3-for-loops-while-loops-and-ifelse)
+  - [Step 3: for loops, while loops and if/else](#step-3-for-loops-while-loops-and-ifelse)
   - [Step 4: Variables](#step-4-variables)
   - [Step 5: Lists and Dictionaries](#step-5-lists-and-dictionaries)
   - [Step 6: Shortest Path Algorithm](#step-6-shortest-path-algorithm)
