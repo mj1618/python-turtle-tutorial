@@ -15,8 +15,8 @@ In the first version the game is won by reaching the plant.
   - [Step 2: Create a World](#step-2-create-a-world)
   - [Step 3: ifs and for loops](#step-3-ifs-and-for-loops)
   - [Step 4: Variables](#step-4-variables)
-  - [Step 5: Lists and Maps](#step-5-lists-and-maps)
-  - [Step 6: The Perfect Algorithm](#step-6-the-perfect-algorithm)
+  - [Step 5: Lists and Dictionaries](#step-5-lists-and-dictionaries)
+  - [Step 6: Shortest Path Algorithm](#step-6-shortest-path-algorithm)
   - [Step 7: Master Level Algorithm](#step-7-master-level-algorithm)
 
 ## Terminology
