@@ -13,7 +13,7 @@ In the first version the game is won by reaching the plant.
   - [Terminology](#terminology)
   - [Step 1: Get setup](#step-1-get-setup)
   - [Step 2: Create a World](#step-2-create-a-world)
-  - [Step 3: ifs and for loops](#step-3-for-loops-and-ifelse)
+  - [Step 3: ifs and for loops](#step-3-for-loops-while-loops-and-ifelse)
   - [Step 4: Variables](#step-4-variables)
   - [Step 5: Lists and Dictionaries](#step-5-lists-and-dictionaries)
   - [Step 6: Shortest Path Algorithm](#step-6-shortest-path-algorithm)
@@ -114,7 +114,7 @@ Even at advanced levels playing and breaking things is a core part of programmin
 It is a  skill you must learn and get comfortable with as it is the only way to properly test your code and to see where its limits are.
 You should find some bugs in the game already by doing this.
 
-## Step 3: for loops and if/else
+## Step 3: for loops, while loops and if/else
 
 One way to get the Turtle to the plant is to repeat the line `world.move_turtle_right()` 10 times, and then repeat the line `world.move_turtle_up()` 10 times.
 You should see something printed to the console congratulating you for reaching the plant.
@@ -159,6 +159,25 @@ Create a rock formation that goes across the screen from (1, 5) to (9, 5).
 Can you create a diagonal line?
 
 Extra: there are some other ways to use `range()` and you can read about them at [https://www.w3schools.com/python/ref_func_range.asp](https://www.w3schools.com/python/ref_func_range.asp).
+
+__While Loops__
+
+While loops are similar to for loops, except instead of moving through a list of numbers it continues until some condition is met.
+It can accomplish the same thing as a for loop, but can also be used in other circumstances.
+
+```py
+a = 0
+while a < 10:
+  a = a + 1
+```
+This accomplishes the same as our first for loop.
+
+```py
+while world.is_turtle_on_plant() == False:
+  world.move_turtle_right()
+```
+Here's an example that's not like a for loop.
+We want to keep repeating a block of code until the turtle reaches the plant.
 
 __if statements__
 
@@ -371,15 +390,15 @@ For this challenge you will need the following tools mastered:
 - and an understanding of the [Shortest Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
 
 The sequence of steps for the algorithm is as follows:
-- create a dictionary `points_to` whose keys are coordinate tuples and values are coordinate tuples
-- set `points_to[turtle_starting_point]` to itself
-- set all other `points_to` coordinates on the grid to `None`
-- create a list called `queue` that has one element: the turtles starting position
-- iterate while the `queue` has values, and `points_to[plant_position]` is None
+- create a dictionary `points_to` whose keys are coordinate tuples and values are coordinate tuples. Think of `points_to` as the grid, but with each position pointing to an adjacent position.
+- set `points_to[turtle_starting_point]` to itself. This is used by the algorithm to know when to stop.
+- set all other `points_to` coordinates on the grid to `None`. This indicates we haven't searched those positions yet.
+- create a list called `queue` that has one element: the turtles starting position. Think of this as the list of positions we are going to search next.
+- iterate while the `queue` still has values to search, and `points_to[plant_position]` is None
   - `pop` from the front of the queue into `current`
   - get positions around current using `world.get_positions_around(current)`
   - for loop over these positions using the `next` variable
-    - set `points_to` for `next` to `current` (i.e. indicating next points to current)
+    - set `points_to` for `next` to `current` (i.e. indicating `next` points to `current`)
     - append `next` to `queue`
 - if `points_to[plant_position]` is `None` it means there is no valid path
 - else follow the chain of `points_to` from the plant position back to the turtle
