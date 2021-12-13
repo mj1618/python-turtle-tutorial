@@ -4,6 +4,7 @@
   - [world.create_rock(x, y)](#worldcreate_rockx-y)
   - [world.create_plant(x, y)](#worldcreate_plantx-y)
   - [world.create_turtle(x, y)](#worldcreate_turtlex-y)
+  - [world.can\_move_{direction}()](#worldcan_move_direction)
   - [world.is\_rock_at(x, y)](#worldis_rock_atx-y)
   - [world.is\_rock_{direction}()](#worldis_rock_direction)
   - [world.is_turtle_on_plant()](#worldis_turtle_on_plant)
@@ -38,6 +39,10 @@ Create a plant at (x, y)
 ## world.create_turtle(x, y)
 
 Create a turtle at (x, y)
+
+## world.can_move_{direction}()
+
+Can the turtle move in the direction, returns True if there is no rock or wall in the way, False otherwise.
 
 ## world.is\_rock_at(x, y)
 

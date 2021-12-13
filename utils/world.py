@@ -1,5 +1,5 @@
 import turtle
-from .config import PLANT, ROCK, GRID
+from .config import PLANT, ROCK, GRID, NUM_GRID_ROWS
 import sys
 from .turtle import MyTurtle
 from .rock import Rock
@@ -82,6 +82,18 @@ class World():
       if rock.x == self.my_turtle.x and rock.y + 1 == self.my_turtle.y:
         return True
     return False
+
+  def can_move_right(self):
+    return self.is_rock_right() is False and self.my_turtle.x < NUM_GRID_ROWS - 1
+
+  def can_move_left(self):
+    return self.is_rock_left() is False and self.my_turtle.x > 0
+
+  def can_move_up(self):
+    return self.is_rock_up() is False and self.my_turtle.y < NUM_GRID_ROWS - 1
+
+  def can_move_down(self):
+    return self.is_rock_down() is False and self.my_turtle.y > 0
 
   def is_turtle_on_plant(self):
     for plant in self.plants:

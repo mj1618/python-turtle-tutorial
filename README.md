@@ -220,11 +220,11 @@ for i in range(10):
 
 __ifs With Your Turtle__
 
-Use the `world.is_rock_{direction}()` functions to determine if there is a rock next to your turtle.
-Use this function inside an if/else to help the turtle navigate around rocks, something like:
+Use the `world.can_move_{direction}()` functions to determine if the turtle can move in the up, down, left or right directions.
+Use this function inside an if/else to help the turtle navigate around rocks and walls, something like:
 
 ```py
-if world.is_rock_right() == True:
+if world.can_move_right() == True:
   world.move_turtle_up()
 else:
   world.move_turtle_right()
@@ -294,12 +294,43 @@ __Challenge__
 
 Use variables, if/else and for loops to get past tricky rock formations.
 Tricky rock formations may include:
-- a line from (1, 1) to (10, 1)
-- a line from (1, 1) to (1, 10)
-- a diagonal from (2, 1) to (10, 9)
-- a diagonal from (10, 0) to (1, 9)
-- a line from (10, 5) to (5, 5) and another line from (5, 5) to (5, 1). This is a three sided square (including the wall) designed to trap the turtle (though it has one way to get out).
-- same as previously, but placed wherever the turtles natural path goes so you are forced to navigate through the three-sided square
+
+__Trap 1__
+```py
+world.create_rock(5, 0)
+world.create_rock(5, 1)
+world.create_rock(4, 1)
+world.create_rock(3, 1)
+```
+__Trap 2__
+```py
+world.create_rock(5, 0)
+world.create_rock(5, 1)
+world.create_rock(5, 2)
+world.create_rock(4, 2)
+world.create_rock(3, 2)
+world.create_rock(3, 1)
+```
+__Trap 3__
+```py
+world.create_rock(5, 0)
+world.create_rock(5, 1)
+world.create_rock(5, 2)
+world.create_rock(5, 3)
+world.create_rock(4, 3)
+world.create_rock(3, 3)
+world.create_rock(2, 3)
+world.create_rock(2, 2)
+world.create_rock(2, 1)
+world.create_rock(3, 1)
+```
+
+Don't just avoid these traps, imagine these traps could be placed anywhere on the turtle's path and come up with something generic to navigate through them.
+
+If you get stuck, check out the solutions folder for these traps: 
+- [./solutions/basic_trap_evasion_1.py](./solutions/basic_trap_evasion_1.py)
+- [./solutions/basic_trap_evasion_2.py](./solutions/basic_trap_evasion_2.py)
+- [./solutions/basic_trap_evasion_3.py](./solutions/basic_trap_evasion_3.py)
 
 ## Step 5: Lists and Dictionaries
 
@@ -388,6 +419,11 @@ For this challenge you will need the following tools mastered:
   - [world.create_random_rocks(number_of_rocks)](./docs/API.md#worldcreate_random_rocksnumber_of_rocks)
   - [world.move_along_path(path)](./docs/API.md#worldmove_along_pathpath)
 - and an understanding of the [Shortest Grid Path Algorithm](https://medium.com/algorithms-digest/shortest-path-in-a-grid-with-obstacles-elimination-ad0c07ed41c2)
+
+First instead of creating each rock individually we're going to create 30 randomly positioned rocks on the grid.
+```py
+world.create_random_rocks(30)
+```
 
 The sequence of steps for the algorithm is as follows:
 - create a dictionary `points_to` whose keys are coordinate tuples and values are coordinate tuples. Think of `points_to` as the grid, but with each position pointing to an adjacent position.
