@@ -326,6 +326,7 @@ world.create_rock(3, 1)
 ```
 
 Don't just avoid these traps, imagine these traps could be placed anywhere on the turtle's path and come up with something generic to navigate through them.
+Use [world.can\_move_{direction}()](./docs/API.md#worldis_rock_direction) to know whether the turtle can move in a particular direction and not hit a rock or wall.
 
 If you get stuck, check out the solutions folder for these traps: 
 - [./solutions/basic_trap_evasion_1.py](./solutions/basic_trap_evasion_1.py)
