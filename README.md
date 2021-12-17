@@ -168,21 +168,23 @@ It can accomplish the same thing as a for loop, but can also be used in other ci
 ```py
 a = 0
 while a < 10:
+  print(a)
   a = a + 1
 ```
 This accomplishes the same as our first for loop.
 
+Here's an example that's not like a for loop.
 ```py
 while world.is_turtle_on_plant() == False:
   world.move_turtle_right()
 ```
-Here's an example that's not like a for loop.
-We want to keep repeating a block of code until the turtle reaches the plant.
+We want to keep repeating a block of code (move turtle right) until the turtle reaches the plant.
+There's a problem here, the turtle may not ever reach the plant and the turtle will try to keep moving right into a wall.
 
 __if statements__
 
-What if we only want to do something if a particular condition is true.
-For example: we only want to move up if there's no rock there.
+What if we only want to do something once if a particular condition is true.
+For example: we only want to move up once if there's no rock there.
 
 This is what "if"s are used for.
 
@@ -221,18 +223,18 @@ for i in range(10):
 __ifs With Your Turtle__
 
 Use the `world.can_move_{direction}()` functions to determine if the turtle can move in the up, down, left or right directions.
-Use this function inside an if/else to help the turtle navigate around rocks and walls, something like:
+Use these functions inside an if/else to help the turtle navigate around rocks and walls, something like:
 
 ```py
 if world.can_move_right() == True:
-  world.move_turtle_up()
-else:
   world.move_turtle_right()
+else:
+  world.move_turtle_up()
 ```
 
 __Challenge__
 
-Using `if/else` and `for` loops create a program that gets the turtle to the plant.
+Using `if/else` and loops create a program that gets the turtle to the plant.
 Then test your algorithm by placing rocks in the turtles way.
 
 Whenever you find a rock formation that your turtle can't navigate, change your turtle algorithm so it can handle all previous rock formations plus this one.
@@ -288,11 +290,11 @@ if world.is_rock_up() == False:
     world.move_turtle_up()
 ```
 
-This will help you get past the issue described previously of remembering the turtle's last direction and navigating tricky rock formations.
+You will need to get creative to get past some tricky rock formations and variables may come in handy.
 
 __Challenge__
 
-Use variables, if/else and for loops to get past tricky rock formations.
+Use one or more of variables, if/else and for loops to get past tricky rock formations.
 Tricky rock formations may include:
 
 __Trap 1__
@@ -325,7 +327,7 @@ world.create_rock(2, 1)
 world.create_rock(3, 1)
 ```
 
-Don't just avoid these traps, imagine these traps could be placed anywhere on the turtle's path and come up with something generic to navigate through them.
+Imagine these traps could be placed anywhere on the turtle's path and come up with something generic to navigate through them.
 Use [world.can\_move_{direction}()](./docs/API.md#worldis_rock_direction) to know whether the turtle can move in a particular direction and not hit a rock or wall.
 
 If you get stuck, check out the solutions folder for these traps: 
@@ -445,7 +447,7 @@ This is a tough challenge and involves an algorithm and some data structures.
 Even seasoned developers may not have come across this type of problem and may struggle, so don't worry if you don't get it straight away.
 
 Data Structures are frequently used in day-to-day software development roles and this is a great exercise to learn some.
-Algorithms are a branch of Computer Science that is rarely used in day-to-day software development, but it is worth at least learning the Shortest Path Algorithm to get an appreciation for these elusive beasts.
+Algorithms are a branch of Computer Science that is rarely used in day-to-day software development, but it is worth at least learning the Shortest Grid Path Algorithm to get an appreciation for these elusive beasts.
 
 The solution is available here if you get stuck: [./solutions/shortest_path.py](./solutions/shortest_path.py).
 
@@ -454,7 +456,7 @@ The solution is available here if you get stuck: [./solutions/shortest_path.py](
 Add multiple plants at random positions to the world and add rocks at random positions.
 Create an algorithm that reaches all plants (that are reachable) in the shortest possible number of moves.
 
-You will need the above shortest path algorithm, plus some of your own flare to figure out how to hit all plants.
+You will need the above shortest grid path algorithm, plus some of your own flare to figure out how to reach all plants.
 Start with what's called a "brute-force" algorithm: come up with every possible order of plants and solve for every order, then select the one that results in the least number of turtle steps.
 Permutations may help you with this challenge: [https://www.geeksforgeeks.org/permutation-and-combination-in-python/](https://www.geeksforgeeks.org/permutation-and-combination-in-python/).
 
