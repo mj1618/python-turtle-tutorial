@@ -5,6 +5,7 @@ from .turtle import MyTurtle
 from .rock import Rock
 from .plant import Plant
 import random
+import time
 
 my_world = None
 
@@ -144,20 +145,25 @@ class World():
 
   
   def create_random_rocks(self, number_of_rocks):
-      remaining_positions = set()
-      for x in range(11):
-          for y in range(11):
-              remaining_positions.add((x, y))
+    turtle.tracer(False)
 
-      if self.has_turtle() is True:
-        remaining_positions.remove(self.get_turtle_position())  # turtle starting point
-      if self.has_plant() is True:
-        remaining_positions.remove(self.get_plant_positions()[0])  # plant finish point
+    remaining_positions = set()
+    for x in range(11):
+      for y in range(11):
+          remaining_positions.add((x, y))
 
-      for i in range(number_of_rocks):
-          (x, y) = random.choice(tuple(remaining_positions))
-          self.create_rock(x, y)
-          remaining_positions.remove((x, y))
+    if self.has_turtle() is True:
+      remaining_positions.remove(self.get_turtle_position())  # turtle starting point
+    if self.has_plant() is True:
+      remaining_positions.remove(self.get_plant_positions()[0])  # plant finish point
+
+    for i in range(number_of_rocks):
+      (x, y) = random.choice(tuple(remaining_positions))
+      self.create_rock(x, y)
+      remaining_positions.remove((x, y))
+    turtle.tracer(True)
+    turtle.update()
+    
 
   def get_positions_around(self, position):
     ls = list()
