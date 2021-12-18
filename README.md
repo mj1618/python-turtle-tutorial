@@ -146,11 +146,11 @@ print('this will only print once')
 
 _Note: python takes spaces very seriously, one space forward or back and python will think this is a different block of code._
 
-__Challenge 1__
+__For Loop Challenge 1__
 
 Use for loops to get the turtle to the plant while repeating as few lines as possible.
 
-__Challenge 2__
+__For Loop Challenge 2__
 
 Try using for loops to create rocks.
 Note that you can optionally use `i` for your `x` and `y` coordinates.
@@ -232,7 +232,7 @@ else:
   world.move_turtle_up()
 ```
 
-__Challenge__
+__If Challenge__
 
 Using `if/else` and loops create a program that gets the turtle to the plant.
 Then test your algorithm by placing rocks in the turtles way.
@@ -259,7 +259,7 @@ print(a)
 
 What will print to the screen is a `1` followed by a `3`.
 
-__Challenge__
+__For Loop and Variable Challenge__
 
 Calculate the sum of the numbers from 1 to 100 using a `for` loop and a variable.
 
@@ -292,7 +292,7 @@ if world.is_rock_up() == False:
 
 You will need to get creative to get past some tricky rock formations and variables may come in handy.
 
-__Challenge__
+__Trap Challenge__
 
 Use one or more of variables, if/else and for loops to get past tricky rock formations.
 Tricky rock formations may include:
@@ -406,6 +406,51 @@ print(x) # prints {a: 1, b: 2}
 ```
 
 Have a play, break it, and read up more if you need more information here: [https://www.programiz.com/python-programming/dictionary](https://www.programiz.com/python-programming/dictionary)
+
+__List Challenge__
+
+Use a list to track the turtles steps, reverse the list and then make the turtle move back along them.
+
+Use `world.get_turtle_position()` after every step and append each turtle position to a list.
+Then reverse the list and pass the list into a function `world.move_along_path(my_list)`.
+This should reverse the steps of a turtle.
+
+Use this technique to help get out of sticky situations like the previous challenges.
+
+Look at [./solutions/reverse_steps.py](./solutions/reverse_steps.py) if you get stuck on where to start.
+
+
+__Dictionary and List Challenge__
+
+Use a dictionary to track where you have been before to make sure you don't repeat your steps.
+
+Every key in the dictionary will be a turtle position.
+Every value will be a list of directions the turtle has tried before.
+
+E.g.
+
+```py
+dict = {}
+for x in range(11):
+  for y in range(11):
+    dict[(x,y)] = list()
+
+dict[world.get_turtle_position()].append('RIGHT')
+world.move_turtle_right()
+```
+
+Now here's how you check you're not repeating steps:
+```py
+if 'RIGHT' not in dict[world.get_turtle_position()] and world.can_move_right():
+    dict[world.get_turtle_position()].append('RIGHT')
+    world.move_turtle_right()
+```
+
+Add other directions and wrap in a while loop.
+See how your turtle goes, it should help with a lot of tricky rock formations but it won't be perfect.
+You should try to end the program when you know your turtle is stuck, i.e. :
+- when it hasn't reached the plant and,
+- when it is in a position where there are no more positions to try
 
 ## Step 6: Shortest Grid Path Algorithm
 
