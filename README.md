@@ -452,6 +452,8 @@ You should try to end the program when you know your turtle is stuck, i.e. :
 - when it hasn't reached the plant and,
 - when it is in a position where there are no more positions to try
 
+If you get stuck see [./solutions/remember_previous_steps.py](./solutions/remember_previous_steps.py).
+
 ## Step 6: Shortest Grid Path Algorithm
 
 For this challenge you will need the following tools mastered:
