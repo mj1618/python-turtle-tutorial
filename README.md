@@ -55,7 +55,7 @@ There is a `main_original.py` which is a copy of main you can use if you need to
 Other code and images sit in the folders `utils` and `assets`, you can have a look if you want but you don't need to touch these files for this tutorial.
 The `solutions` folder contains some nifty solutions to the game which you can look at if you are stuck for ideas later on in the tutorial.
 
-__Imports__
+### Imports
 
 ```py
 from utils.utils import pause
@@ -65,7 +65,7 @@ from utils.world import create_world
 This imports some things you can use from the utils.
 All it means is you can now use the functions `pause` and `create_world` in the file.
 
-__Create Stuff__
+### Create Stuff
 
 ```py
 world = create_world() # create the world object
@@ -80,7 +80,7 @@ You pass in an `x` and `y` coordinate to tell the world where to put these eleme
 
 _Note: to see all the possible functions to call on the `world` object, see the [API Guide](./docs/API.md)._
 
-__Move the Turtle__
+### Move the Turtle
 
 ```py
 world.move_turtle_right()
@@ -92,7 +92,7 @@ world.move_turtle_down()
 These are the functions you call to move the turtle in each direction.
 It won't allow you to hit a rock or the walls and will print a message to the console when you try to.
 
-__Pause__
+### Pause
 
 ```py
 pause()
@@ -102,7 +102,7 @@ This pauses the program so that it doesn't exit until you tell it to.
 Try removing it and you will see the program starts, everything happens as expected, but then it exits and closes down immediately.
 It's not important, just keep it at the end so the program stays running.
 
-__Have a play__
+### Have a play
 
 Now that you have these basics in `main.py`, play around a bit.
 Change the coordinates being passed in to create elements.
@@ -123,7 +123,7 @@ This isn't very efficient.
 Imagine if the grid was 1000 x 1000.
 Now you've got a very repetitive program.
 
-__for loops__
+### for loops
 
 There's a programmatic way to do something repetitively with a lot less code:
 ```py
@@ -146,11 +146,11 @@ print('this will only print once')
 
 _Note: python takes spaces very seriously, one space forward or back and python will think this is a different block of code._
 
-__For Loop Challenge 1__
+### For Loop Challenge 1
 
 Use for loops to get the turtle to the plant while repeating as few lines as possible.
 
-__For Loop Challenge 2__
+### For Loop Challenge 2
 
 Try using for loops to create rocks.
 Note that you can optionally use `i` for your `x` and `y` coordinates.
@@ -160,7 +160,7 @@ Can you create a diagonal line?
 
 Extra: there are some other ways to use `range()` and you can read about them at [https://www.w3schools.com/python/ref_func_range.asp](https://www.w3schools.com/python/ref_func_range.asp).
 
-__While Loops__
+### While Loops
 
 While loops are similar to for loops, except instead of moving through a list of numbers it continues until some condition is met.
 It can accomplish the same thing as a for loop, but can also be used in other circumstances.
@@ -181,7 +181,7 @@ while world.is_turtle_on_plant() == False:
 We want to keep repeating a block of code (move turtle right) until the turtle reaches the plant.
 There's a problem here, the turtle may not ever reach the plant and the turtle will try to keep moving right into a wall.
 
-__if statements__
+### if statements
 
 What if we only want to do something once if a particular condition is true.
 For example: we only want to move up once if there's no rock there.
@@ -206,7 +206,7 @@ Once again: play and try to break it.
 Notice that we also add yet another tab in front of the `print`.
 This indicates the `print` is now part of the `if` statement, and the `if` is part of the `for` loop.
 
-__else statements__
+### else statements
 
 `if` has a counterpart called `else`.
 It allows you to do one thing on a certain condition, otherwise (or else) do something else.
@@ -220,7 +220,7 @@ for i in range(10):
     print(i + 10)
 ```
 
-__ifs With Your Turtle__
+### ifs With Your Turtle
 
 Use the `world.can_move_{direction}()` functions to determine if the turtle can move in the up, down, left or right directions.
 Use these functions inside an if/else to help the turtle navigate around rocks and walls, something like:
@@ -232,7 +232,7 @@ else:
   world.move_turtle_up()
 ```
 
-__If Challenge__
+### If Challenge
 
 Using `if/else` and loops create a program that gets the turtle to the plant.
 Then test your algorithm by placing rocks in the turtles way.
@@ -259,11 +259,11 @@ print(a)
 
 What will print to the screen is a `1` followed by a `3`.
 
-__For Loop and Variable Challenge__
+### For Loop and Variable Challenge
 
 Calculate the sum of the numbers from 1 to 100 using a `for` loop and a variable.
 
-__Text Variables__
+### Text Variables
 
 Variables can also hold text, which in programming are called "strings".
 You can concatenate strings using the plus symbol.
@@ -292,19 +292,19 @@ if world.is_rock_up() == False:
 
 You will need to get creative to get past some tricky rock formations and variables may come in handy.
 
-__Trap Challenge__
+### Trap Challenge
 
 Use one or more of variables, if/else and for loops to get past tricky rock formations.
 Tricky rock formations may include:
 
-__Trap 1__
+#### Trap 1
 ```py
 world.create_rock(5, 0)
 world.create_rock(5, 1)
 world.create_rock(4, 1)
 world.create_rock(3, 1)
 ```
-__Trap 2__
+#### Trap 2
 ```py
 world.create_rock(5, 0)
 world.create_rock(5, 1)
@@ -313,7 +313,7 @@ world.create_rock(4, 2)
 world.create_rock(3, 2)
 world.create_rock(3, 1)
 ```
-__Trap 3__
+#### Trap 3
 ```py
 world.create_rock(5, 0)
 world.create_rock(5, 1)
@@ -344,7 +344,7 @@ Python provides `list()` to allow us to do that.
 As for Dictionaries (or what other languages call maps), imagine we wanted to look variables up based on their key.
 For example: if we had multiple turtles, and wanted to look up each turtles position based on the turtles name.
 
-__Lists__
+### Lists
 
 Let's dive into some code for lists.
 
@@ -392,7 +392,7 @@ Will print `1` this time.
 
 As always: have a play, try to break it!
 
-__Dictionaries__
+### Dictionaries
 
 Dictionaries can be described a bit simpler than lists, the only operation you really need to know to use dictionaries is how to set a `key` to a `value`.
 Think of keys like names for variables.
@@ -407,7 +407,7 @@ print(x) # prints {a: 1, b: 2}
 
 Have a play, break it, and read up more if you need more information here: [https://www.programiz.com/python-programming/dictionary](https://www.programiz.com/python-programming/dictionary)
 
-__List Challenge__
+### List Challenge
 
 Use a list to track the turtles steps, reverse the list and then make the turtle move back along them.
 
@@ -420,7 +420,7 @@ Use this technique to help get out of sticky situations like the previous challe
 Look at [./solutions/reverse_steps.py](./solutions/reverse_steps.py) if you get stuck on where to start.
 
 
-__Dictionary and List Challenge__
+### Dictionary and List Challenge
 
 Use a dictionary to track where you have been before to make sure you don't repeat your steps.
 
